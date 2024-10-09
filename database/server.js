@@ -61,6 +61,23 @@ app.delete('/users/:id', (req, res) => {
   });
 });
 
+// Route pour vérifier les informations de connexion
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+  const sql = 'SELECT * FROM users WHERE email = ? AND password = ?';
+  db.get(sql, [email, password], (err, row) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    if (row) {
+      res.json({ message: 'Connexion réussie', user: row });
+    } else {
+      res.status(401).json({ error: 'Email ou mot de passe incorrect' });
+    }
+  });
+});
+
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });

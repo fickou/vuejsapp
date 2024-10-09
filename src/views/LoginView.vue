@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name: "LoginView",
     data() {
@@ -20,8 +21,18 @@ export default {
         }
     },
     methods:{
-        traitement(){
-            alert("Email : " + this.email + "\nPassword : " + this.password);
+        async traitement(){
+            try {
+                    await axios.post('http://localhost:3000/login',{
+                    email: this.email,
+                    password: this.password
+                });
+                alert('connexion réussi !');
+                this.$router.push('/');
+            } catch (error) {
+                console.log("Erreur de la connexion :",error);
+                alert('Email ou mot de passe incorrect');
+            }
         }
     }
 }

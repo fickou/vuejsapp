@@ -11,8 +11,9 @@
       collaboration pour atteindre nos objectifs.
     </p>
     <p>
-      Nous mettons un point d'honneur à travailler avec intégrité et à viser l'excellence dans tout ce que nous entreprenons.
-      Nous nous efforçons de dépasser les attentes et de créer des solutions innovantes et utiles.
+      Nous nous engageons à travailler avec intégrité et à viser l'excellence dans toutes nos 
+      initiatives. Notre ambition est de dépasser les attentes et de créer des solutions innovantes 
+      et utiles pour répondre aux défis actuels.
     </p>
     <p>
       Merci de votre visite et n'hésitez pas à nous contacter pour toute question ou demande de renseignements supplémentaires.
